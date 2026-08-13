@@ -1,3 +1,5 @@
+import { faDesktop } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import type { Theme } from '../types/content'
 
 type ThemeSwitcherProps = {
@@ -7,7 +9,7 @@ type ThemeSwitcherProps = {
 
 const nextTheme: Record<Theme, { value: Theme; label: string; icon: string }> = {
   dark: { value: 'light', label: 'Light', icon: '☀' },
-  light: { value: 'retro', label: 'Retro', icon: '▣' },
+  light: { value: 'retro', label: 'Retro', icon: 'desktop' },
   retro: { value: 'dark', label: 'Dark', icon: '☾' },
 }
 
@@ -22,7 +24,9 @@ export function ThemeSwitcher({ theme, onChange }: ThemeSwitcherProps) {
       aria-label={`${next.label}-Theme aktivieren`}
       title={`${next.label}-Theme aktivieren`}
     >
-      <span aria-hidden="true">{next.icon}</span>
+      <span aria-hidden="true">
+        {next.icon === 'desktop' ? <FontAwesomeIcon icon={faDesktop} /> : next.icon}
+      </span>
       <span className="theme-switcher__label">{next.label}</span>
     </button>
   )
