@@ -1,0 +1,83 @@
+.container {
+  width: min(100% - 2rem, 74rem);
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: clamp(5rem, 10vw, 8.5rem);
+}
+
+.section--tinted {
+  background: var(--color-surface-muted);
+}
+
+.section--dark {
+  padding-block: clamp(5rem, 10vw, 8.5rem);
+  background: var(--color-dark-section);
+  color: var(--color-dark-section-text);
+}
+
+.section-heading {
+  max-width: 45rem;
+  margin-bottom: clamp(2.5rem, 6vw, 4rem);
+}
+
+.section-heading > p:last-child {
+  max-width: 38rem;
+  color: var(--color-text-muted);
+  font-size: 1.1rem;
+}
+
+.section--dark .section-heading > p:last-child {
+  color: var(--color-dark-section-muted);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.5rem, 5vw, 4rem);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: clamp(2rem, 8vw, 7rem);
+}
+
+.about-grid__lead {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  line-height: 1.45;
+}
+
+.about-grid__copy {
+  color: var(--color-text-muted);
+  font-size: 1.08rem;
+}
+
+.contact {
+  max-width: 55rem;
+  text-align: center;
+}
+
+.contact h2 {
+  margin-inline: auto;
+}
+
+.contact > p:not(.eyebrow) {
+  max-width: 38rem;
+  margin: 0 auto 2rem;
+  color: var(--color-text-muted);
+  font-size: 1.12rem;
+}
+
+@media (max-width: 52rem) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 42rem) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
