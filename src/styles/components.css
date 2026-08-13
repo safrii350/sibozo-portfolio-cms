@@ -38,8 +38,19 @@
   text-decoration: none;
 }
 
-.navbar__brand span {
+.navbar__brand-text > span {
   color: var(--color-accent);
+}
+
+.navbar__brand-text {
+  color: var(--color-text);
+}
+
+.navbar__brand-image {
+  display: none;
+  width: auto;
+  height: 3rem;
+  object-fit: contain;
 }
 
 .navbar__panel,
@@ -583,7 +594,7 @@
 
 .site-footer .container {
   display: flex;
-  min-height: 5rem;
+  min-height: 4.25rem;
   align-items: center;
   justify-content: space-between;
 }
@@ -949,6 +960,28 @@
   font-size: 0.85rem;
 }
 
+:root[data-theme='retro'] .about-grid__lead {
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  line-height: 1.55;
+}
+
+:root[data-theme='retro'] .about-grid__copy {
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+:root[data-theme='retro'] .about-avatar {
+  border: 2px solid;
+  border-color: #ffffff #4d4d4d #4d4d4d #ffffff;
+  border-radius: 0;
+  background:
+    linear-gradient(rgb(23 74 128 / 6%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(23 74 128 / 6%) 1px, transparent 1px),
+    #c9c6be;
+  background-size: 20px 20px;
+  box-shadow: 2px 2px 0 #000000;
+}
+
 :root[data-theme='retro'] .site-header,
 :root[data-theme='retro'] .legal-header,
 :root[data-theme='retro'] .site-footer {
@@ -961,6 +994,15 @@
 :root[data-theme='retro'] .navbar__brand {
   color: #174a80;
   font-family: "IBM Plex Mono", monospace;
+}
+
+:root[data-theme='retro'] .navbar__brand-text {
+  display: none;
+}
+
+:root[data-theme='retro'] .navbar__brand-image {
+  display: block;
+  image-rendering: auto;
 }
 
 :root[data-theme='retro'] .navbar__links a,
@@ -1186,5 +1228,15 @@
 @media (max-width: 30rem) {
   :root[data-theme='retro'] .hero h1 {
     font-size: clamp(1.6rem, 7.8vw, 1.95rem);
+  }
+
+  :root[data-theme='retro'] .legal-section h2 {
+    font-size: clamp(1.3rem, 6.3vw, 1.6rem);
+    overflow-wrap: anywhere;
+  }
+
+  :root[data-theme='retro'] .legal-section h3 {
+    font-size: 0.98rem;
+    overflow-wrap: anywhere;
   }
 }

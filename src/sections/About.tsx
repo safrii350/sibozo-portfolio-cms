@@ -13,10 +13,20 @@ export function About() {
         <h2 id="about-title">{copy.aboutTitle}</h2>
       </div>
       <div className="about-grid">
-        {language === 'de' ? <p className="about-grid__lead">
-          Ich bin Michael Sibozo und befinde mich in der Abschlussphase meiner Umschulung zum
-          Fachinformatiker für Anwendungsentwicklung.
-        </p> : <p className="about-grid__lead">{aboutEn.lead}</p>}
+        <div className="about-grid__profile">
+          {language === 'de' ? <p className="about-grid__lead">
+            Ich bin Michael Sibozo und befinde mich in der Abschlussphase meiner Umschulung zum
+            Fachinformatiker für Anwendungsentwicklung.
+          </p> : <p className="about-grid__lead">{aboutEn.lead}</p>}
+          <figure className="about-avatar">
+            <img
+              src="/images/avatar.png"
+              alt={language === 'de' ? 'Stilisierter Avatar von Michael Sibozo mit Laptop' : 'Stylized avatar of Michael Sibozo holding a laptop'}
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+        </div>
         {language === 'de' ? <div className="about-grid__copy">
           <p>
             Die fachpraktischen Ausbildungsanteile und den betrieblichen Projektteil habe ich

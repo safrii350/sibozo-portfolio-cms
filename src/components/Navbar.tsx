@@ -45,7 +45,10 @@ export function Navbar({ theme, onThemeChange }: NavbarProps) {
     <header className="site-header">
       <nav className="navbar container" aria-label="Hauptnavigation">
         <a className="navbar__brand" href="#top" aria-label="Zur Startseite">
-          <span aria-hidden="true">&lt;</span>sibozo<span aria-hidden="true"> /&gt;</span>
+          <span className="navbar__brand-text" aria-hidden="true">
+            <span>&lt;</span>sibozo<span> /&gt;</span>
+          </span>
+          <img className="navbar__brand-image" src="/images/logo-retro.png" alt="" />
         </a>
 
         <button
