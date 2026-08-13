@@ -14,9 +14,8 @@ export function About() {
       </div>
       <div className="about-grid">
         {language === 'de' ? <p className="about-grid__lead">
-          Ich bin Michael Sibozo. Die fachpraktischen Ausbildungsanteile meiner Umschulung zum
-          Fachinformatiker für Anwendungsentwicklung bei der bfz gGmbH Ulm sowie den betrieblichen
-          Projektteil habe ich abgeschlossen.
+          Ich bin Michael Sibozo und befinde mich in der Abschlussphase meiner Umschulung zum
+          Fachinformatiker für Anwendungsentwicklung.
         </p> : <p className="about-grid__lead">{aboutEn.lead}</p>}
         {language === 'de' ? <div className="about-grid__copy">
           <p>

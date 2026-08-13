@@ -28,7 +28,7 @@ export const ui = {
 } as const
 
 export const aboutEn = {
-  lead: 'I am Michael Sibozo. I have completed the practical training modules and company project of my retraining as an IT specialist in application development at bfz gGmbH Ulm.',
+  lead: 'I am Michael Sibozo and currently completing my retraining as an IT specialist in application development.',
   paragraphs: [
     'The final written part of my Chamber of Commerce (IHK) examination is scheduled for November 2026.',
     'My practical placements took place at Systemhaus Ulm GmbH, with a focus on application development using PHP, Laravel, SQL and Livewire. I built a forum with CRUD functionality and contributed to an internal HR web application.',
