@@ -164,6 +164,16 @@
   font-size: clamp(2.5rem, 6.4vw, 5rem);
 }
 
+@media (min-width: 64rem) {
+  .hero h1 {
+    max-width: 18ch;
+  }
+
+  .hero h1 span {
+    white-space: nowrap;
+  }
+}
+
 .hero__intro {
   max-width: 40rem;
   margin-bottom: 2rem;
@@ -902,7 +912,7 @@
     linear-gradient(145deg, #10283e 0%, #28577e 50%, #122a41 100%);
   background-attachment: fixed;
   font-family: "IBM Plex Mono", monospace;
-  font-size: 0.96rem;
+  font-size: 0.92rem;
 }
 
 :root[data-theme='retro'] h1,
@@ -910,6 +920,33 @@
 :root[data-theme='retro'] h3,
 :root[data-theme='retro'] h4 {
   letter-spacing: 0;
+}
+
+:root[data-theme='retro'] .hero h1 {
+  margin-bottom: 1.1rem;
+  font-size: clamp(2rem, 4.8vw, 3.65rem);
+}
+
+:root[data-theme='retro'] .hero__intro {
+  max-width: 38rem;
+  margin-bottom: 1.4rem;
+  font-size: clamp(0.92rem, 1.5vw, 1.05rem);
+  line-height: 1.55;
+}
+
+:root[data-theme='retro'] .hero__content > .eyebrow {
+  margin-bottom: 0.7rem;
+  font-size: 0.7rem;
+}
+
+:root[data-theme='retro'] .hero__actions {
+  gap: 0.6rem;
+}
+
+:root[data-theme='retro'] .hero__actions .button {
+  min-height: 2.6rem;
+  padding: 0.55rem 0.9rem;
+  font-size: 0.85rem;
 }
 
 :root[data-theme='retro'] .site-header,
@@ -962,7 +999,13 @@
 }
 
 :root[data-theme='retro'] .hero {
-  min-height: calc(100svh - 7.25rem);
+  min-height: 36rem;
+  padding-block: clamp(3rem, 7vw, 5rem);
+  background-color: #d6d2c8;
+  background-image:
+    linear-gradient(rgb(23 74 128 / 6%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(23 74 128 / 6%) 1px, transparent 1px);
+  background-size: 26px 26px;
 }
 
 :root[data-theme='retro'] .hero::before {
@@ -1109,6 +1152,10 @@
 }
 
 @media (max-width: 52rem) {
+  :root[data-theme='retro'] .hero {
+    min-height: auto;
+  }
+
   :root[data-theme='retro'] .navbar__panel {
     border: 2px solid;
     border-color: #ffffff #555555 #555555 #ffffff;
@@ -1133,5 +1180,11 @@
     background: #d6d2c8;
     color: #000000;
     font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  :root[data-theme='retro'] .hero h1 {
+    font-size: clamp(1.6rem, 7.8vw, 1.95rem);
   }
 }
