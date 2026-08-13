@@ -886,6 +886,17 @@
 }
 
 @media (max-width: 30rem) {
+  .hero h1 {
+    font-size: clamp(2rem, 10vw, 2.6rem);
+    overflow-wrap: anywhere;
+  }
+
+  .hero__content,
+  .hero__terminal {
+    width: 100%;
+    min-width: 0;
+  }
+
   .hero__actions .button {
     width: 100%;
   }
@@ -896,18 +907,11 @@
 
   :root[data-theme='retro'] .hero h1 {
     font-size: clamp(1.8rem, 9vw, 2.3rem);
-    overflow-wrap: anywhere;
   }
 
   :root[data-theme='retro'] .about-grid__lead {
     font-size: 1.05rem;
     line-height: 1.6;
-  }
-
-  :root[data-theme='retro'] .hero__content,
-  :root[data-theme='retro'] .hero__terminal {
-    width: 100%;
-    min-width: 0;
   }
 
   :root[data-theme='retro'] .terminal__body,
