@@ -34,7 +34,7 @@
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: clamp(1.5rem, 5vw, 4rem);
 }
 
@@ -68,6 +68,13 @@
   margin: 0 auto 2rem;
   color: var(--color-text-muted);
   font-size: 1.12rem;
+}
+
+.contact__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
 }
 
 @media (max-width: 52rem) {

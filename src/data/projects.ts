@@ -5,7 +5,7 @@ export const projects: Project[] = [
     id: 'traineebook',
     title: 'Traineebook',
     description:
-      'Eine webbasierte Anwendung zur Erstellung, Verwaltung und Freigabe digitaler Ausbildungsnachweise. Auszubildende können Wochenberichte einreichen, während Ausbilder diese prüfen, freigeben oder ablehnen.',
+      'Mit Traineebook können Auszubildende ihre Wochenberichte online schreiben und einreichen. Ausbilder können die Berichte anschließend prüfen, freigeben oder ablehnen.',
     technologies: ['PHP', 'Laravel', 'Blade', 'JavaScript', 'MySQL'],
     status: 'Abschlussprojekt',
     featured: true,
@@ -14,15 +14,15 @@ export const projects: Project[] = [
     id: 'portfolio-cms',
     title: 'sibozo.de',
     description:
-      'Dieses persönliche Portfolio entsteht als schlanker React-One-Pager und wird später um ein eigenes CMS mit Supabase erweitert.',
+      'Mein persönliches Portfolio als React-One-Pager. Später möchte ich die Inhalte über ein kleines Adminpanel mit Supabase verwalten.',
     technologies: ['React', 'TypeScript', 'Vanilla CSS', 'Vite'],
     status: 'In Entwicklung',
   },
   {
     id: 'vista-aero-frutiger',
-    title: 'Vista Aero Frutiger',
+    title: 'Vista World',
     description:
-      'Eine interaktive Browser-Hommage an Windows Vista, Frutiger Aero und die optimistische Desktop-Ästhetik der späten 2000er – mit Fenstern, Startmenü, Desktop-Icons und kleinen spielerischen Details.',
+      'Eine kleine Desktop-Welt im Browser, inspiriert von Windows Vista und Frutiger Aero. Fenster, Startmenü, Desktop-Icons und weitere Details lassen sich direkt ausprobieren.',
     technologies: ['HTML', 'CSS', 'JavaScript'],
     status: 'Live',
     url: 'https://windowsvista.pages.dev/',
@@ -31,17 +31,17 @@ export const projects: Project[] = [
     id: 'wizbase',
     title: 'Wizbase',
     description:
-      'Eine persönliche Wissensdatenbank und Notiz-Web-App, in der sich unterschiedliche Notizen, Anleitungen und hilfreiche Informationen übersichtlich festhalten und wiederfinden lassen.',
+      'Eine Web-App für Notizen, Anleitungen und Wissen, das ich nicht jedes Mal neu suchen möchte. Die Einträge lassen sich übersichtlich sammeln und später wiederfinden.',
     technologies: ['HTML', 'CSS', 'React'],
     status: 'Live',
     url: 'https://wizbase.pages.dev/',
   },
   {
     id: 'linux-setup',
-    title: 'Persönliches Linux-Setup',
+    title: 'Linux Setup',
     description:
-      'Individuell eingerichtete Debian-Arbeitsumgebung mit Hyprland, angepasster Shell, Dotfiles und kleinen Setup-Skripten.',
-    technologies: ['Debian', 'Hyprland', 'Shell', 'Dotfiles'],
+      'Ein Bash-Skript für die automatisierte Einrichtung einer neuen Linux-Arbeitsumgebung. Es installiert und konfiguriert unter anderem Fastfetch, Oh My Posh, GRC, Pipes, htop und btop sowie meine persönlichen Dotfiles.',
+    technologies: ['Bash', 'Shell', 'Git', 'Dotfiles', 'Oh My Posh', 'Fastfetch'],
     status: 'Privates Projekt',
   },
 ]

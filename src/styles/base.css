@@ -12,6 +12,7 @@ html {
 body {
   margin: 0;
   min-width: 20rem;
+  overflow-x: hidden;
   background: var(--color-background);
   color: var(--color-text);
   font-family:
@@ -97,5 +98,9 @@ ul {
   *::after {
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .terminal__cursor {
+    animation: none !important;
   }
 }

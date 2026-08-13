@@ -4,6 +4,7 @@ import '@fontsource/ibm-plex-mono/latin-400.css'
 import '@fontsource/ibm-plex-mono/latin-600.css'
 import '@fontsource/ibm-plex-mono/latin-700.css'
 import App from './App'
+import { LanguageProvider } from './i18n/LanguageContext'
 import './styles/themes.css'
 import './styles/base.css'
 import './styles/layout.css'
@@ -11,6 +12,6 @@ import './styles/components.css'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <LanguageProvider><App /></LanguageProvider>
   </StrictMode>,
 )

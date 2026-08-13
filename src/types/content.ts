@@ -29,6 +29,7 @@ export type Profile = {
   role: string
   location: string
   email: string
+  githubUrl: string
   introduction: string
   focus: string[]
 }

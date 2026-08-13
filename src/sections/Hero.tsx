@@ -1,22 +1,46 @@
-import { profile } from '../data/profile'
+import { useRef } from 'react'
+import { TerminalSequence } from '../components/TerminalSequence'
+import { ui } from '../i18n/content'
+import { useLanguage } from '../i18n/LanguageContext'
 
 export function Hero() {
+  const { language } = useLanguage()
+  const copy = ui[language]
+  const heroRef = useRef<HTMLElement>(null)
+
+  const updateSpotlight = (clientX: number, clientY: number) => {
+    const hero = heroRef.current
+    if (!hero) return
+
+    const bounds = hero.getBoundingClientRect()
+    hero.style.setProperty('--spotlight-x', `${clientX - bounds.left}px`)
+    hero.style.setProperty('--spotlight-y', `${clientY - bounds.top}px`)
+  }
+
   return (
-    <section className="hero container" id="top" aria-labelledby="hero-title">
+    <section
+      className="hero container"
+      id="top"
+      ref={heroRef}
+      aria-labelledby="hero-title"
+      onPointerMove={(event) => {
+        if (event.pointerType === 'mouse') updateSpotlight(event.clientX, event.clientY)
+      }}
+    >
       <div className="hero__content">
-        <p className="eyebrow">Hallo, ich bin {profile.name}.</p>
+        <p className="eyebrow">{copy.hello}</p>
         <h1 id="hero-title">
-          Entwicklung trifft auf <span>Linux und echte Neugier.</span>
+          {copy.heroTitle} <span>{copy.heroAccent}</span>
         </h1>
         <p className="hero__intro">
-          {profile.introduction}
+          {copy.intro}
         </p>
         <div className="hero__actions">
           <a className="button button--primary" href="#projects">
-            Projekte ansehen
+            {copy.projectsButton}
           </a>
           <a className="button button--secondary" href="#contact">
-            Kontakt aufnehmen
+            {copy.contactButton}
           </a>
         </div>
       </div>
@@ -27,12 +51,7 @@ export function Hero() {
           <span />
         </div>
         <div className="terminal__body">
-          <p><span>$</span> whoami</p>
-          <p className="terminal__output">Michael Sibozo</p>
-          <p><span>$</span> focus --current</p>
-          <p className="terminal__output">Linux · Webentwicklung · IT-Support</p>
-          <p><span>$</span> status</p>
-          <p className="terminal__output terminal__status">Offen für den Berufseinstieg</p>
+          <TerminalSequence />
         </div>
       </div>
     </section>

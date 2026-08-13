@@ -14,6 +14,8 @@
   --color-dark-section-text: #edf2fa;
   --color-dark-section-muted: #aeb9c9;
   --shadow-card: 0 18px 50px rgb(21 29 43 / 8%);
+  --hero-grid-line: rgb(36 87 230 / 7%);
+  --hero-grid-glow: rgb(36 87 230 / 10%);
 }
 
 :root[data-theme='dark'] {
@@ -31,6 +33,8 @@
   --color-dark-section-text: #edf2fa;
   --color-dark-section-muted: #aeb9c9;
   --shadow-card: 0 18px 50px rgb(0 0 0 / 20%);
+  --hero-grid-line: rgb(120 152 255 / 7%);
+  --hero-grid-glow: rgb(70 105 210 / 14%);
 }
 
 :root[data-theme='retro'] {

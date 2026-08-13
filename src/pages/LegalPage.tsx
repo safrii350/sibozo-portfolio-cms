@@ -1,8 +1,10 @@
 import { useEffect } from 'react'
 import { SiteFooter } from '../components/SiteFooter'
 import { profile } from '../data/profile'
+import { useLanguage } from '../i18n/LanguageContext'
 
 export function LegalPage() {
+  const { language } = useLanguage()
   useEffect(() => {
     const previousTitle = document.title
     document.title = 'Impressum & Datenschutz | Sibozo'
@@ -24,6 +26,11 @@ export function LegalPage() {
       </header>
 
       <main className="legal-page container" id="legal-content">
+        {language === 'en' && (
+          <p className="legal-language-notice">
+            This legal notice and privacy policy are provided in German. The German version is authoritative.
+          </p>
+        )}
         <div className="legal-page__intro">
           <p className="eyebrow">Rechtliches</p>
           <h1>Impressum &amp; Datenschutz</h1>
@@ -101,12 +108,12 @@ export function LegalPage() {
             Speicherung bestehen. E-Mails werden über die beteiligten Mailserver übertragen.
           </p>
 
-          <h3>4. Theme-Einstellung im Browser</h3>
+          <h3>4. Darstellungs- und Spracheinstellungen im Browser</h3>
           <p>
-            Die gewählte helle oder dunkle Darstellung wird im lokalen Speicher des Browsers
-            gespeichert. Diese Einstellung ist technisch erforderlich, um das gewählte Design bei
-            einem späteren Besuch wiederherzustellen. Sie wird von dieser Website nicht zu
-            Analyse- oder Marketingzwecken verwendet.
+            Das gewählte Theme und die ausgewählte Sprache werden im lokalen Speicher des Browsers
+            gespeichert. Diese Einstellungen sind technisch erforderlich, um die gewählte
+            Darstellung bei einem späteren Besuch wiederherzustellen. Sie werden von dieser Website
+            nicht zu Analyse- oder Marketingzwecken verwendet.
           </p>
 
           <h3>5. Keine Analyse, Werbung oder externen Medien</h3>

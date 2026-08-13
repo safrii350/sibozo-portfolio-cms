@@ -1,14 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
 import type { Theme } from '../types/content'
 import { ThemeSwitcher } from './ThemeSwitcher'
+import { ui } from '../i18n/content'
+import { useLanguage } from '../i18n/LanguageContext'
 
-const navigationItems = [
-  { href: '#about', label: 'Über mich' },
-  { href: '#skills', label: 'Skills' },
-  { href: '#projects', label: 'Projekte' },
-  { href: '#homelab', label: 'Homelab' },
-  { href: '#contact', label: 'Kontakt' },
-]
+const navigationTargets = ['#about', '#skills', '#projects', '#homelab', '#contact']
 
 type NavbarProps = {
   theme: Theme
@@ -16,6 +12,8 @@ type NavbarProps = {
 }
 
 export function Navbar({ theme, onThemeChange }: NavbarProps) {
+  const { language } = useLanguage()
+  const copy = ui[language]
   const [isOpen, setIsOpen] = useState(false)
   const closeButtonRef = useRef<HTMLButtonElement>(null)
   const toggleButtonRef = useRef<HTMLButtonElement>(null)
@@ -77,7 +75,7 @@ export function Navbar({ theme, onThemeChange }: NavbarProps) {
           id="main-navigation"
         >
           <div className="navbar__panel-header">
-            <span>Navigation</span>
+            <span>{copy.navigation}</span>
             <button
               className="navbar__close"
               ref={closeButtonRef}
@@ -92,10 +90,10 @@ export function Navbar({ theme, onThemeChange }: NavbarProps) {
             </button>
           </div>
           <ul className="navbar__links">
-            {navigationItems.map((item) => (
-              <li key={item.href}>
-                <a href={item.href} onClick={closeNavigation}>
-                  {item.label}
+            {navigationTargets.map((href, index) => (
+              <li key={href}>
+                <a href={href} onClick={closeNavigation}>
+                  {copy.nav[index]}
                 </a>
               </li>
             ))}

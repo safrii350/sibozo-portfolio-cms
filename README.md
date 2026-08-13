@@ -17,6 +17,7 @@ Datendateien geladen. Supabase und ein geschütztes Adminpanel sind für später
 - Mobile Navigation als einfahrendes Seitenpanel
 - Dark Mode als Standard sowie Light- und KDE-3.x-inspiriertes Retro-Theme
 - gespeicherte Theme-Auswahl im lokalen Browserspeicher
+- deutsche und englische Portfolio-Inhalte mit Sprachschalter im Footer
 - lokal ausgelieferte Schrift IBM Plex Mono für das Retro-Theme
 - gemeinsame Seite für Impressum und Datenschutz unter `/rechtliches`
 - responsive und zugängliche Bedienelemente
@@ -28,6 +29,7 @@ Datendateien geladen. Supabase und ein geschütztes Adminpanel sind für später
 - Vite
 - Vanilla CSS
 - IBM Plex Mono über Fontsource
+- Font Awesome Icons über lokale React-Pakete
 - ESLint
 
 Es werden keine UI-Library, kein CSS-Framework und kein externes Font-CDN verwendet.
@@ -90,6 +92,13 @@ Dark → Light → Retro → Dark
 
 Dark ist bei einem Erstbesuch das Standard-Theme. Das Retro-Theme orientiert sich gestalterisch an
 klassischen KDE-3.x-Desktop-Oberflächen. Die Auswahl wird im `localStorage` des Browsers gespeichert.
+
+## Sprachen
+
+Deutsch ist die Standardsprache. Über den Schalter `DE / EN` im Footer kann die öffentliche
+Portfolio-Seite vollständig auf Englisch angezeigt werden. Die Auswahl wird im `localStorage`
+gespeichert. Impressum und Datenschutzerklärung bleiben auf Deutsch; in der englischen Ansicht wird
+darauf ausdrücklich hingewiesen.
 
 ## Rechtliches
 
