@@ -50,7 +50,7 @@ export const projectsEn: Project[] = [
   { id: 'portfolio-cms', title: 'sibozo.de', description: 'My personal portfolio built as a React one-pager. I plan to manage its content through a small Supabase admin panel.', technologies: ['React', 'TypeScript', 'Vanilla CSS', 'Vite'], status: 'In Entwicklung' },
   { id: 'vista-aero-frutiger', title: 'Vista World', description: 'A small desktop world in the browser inspired by Windows Vista and Frutiger Aero, with interactive windows, a start menu and desktop icons.', technologies: ['HTML', 'CSS', 'JavaScript'], status: 'Live', url: 'https://windowsvista.pages.dev/' },
   { id: 'wizbase', title: 'Wizbase', description: 'A web app for keeping notes, guides and useful knowledge organized and easy to find again.', technologies: ['HTML', 'CSS', 'React'], status: 'Live', url: 'https://wizbase.pages.dev/' },
-  { id: 'linux-setup', title: 'Linux Setup', description: 'A Bash script that automates a fresh Linux workstation setup, including terminal tools and my personal dotfiles.', technologies: ['Bash', 'Shell', 'Git', 'Dotfiles', 'Oh My Posh', 'Fastfetch'], status: 'Privates Projekt' },
+  { id: 'quizify', title: 'Quizify', description: 'A modern quiz app for preparing for the IHK final exam in application development. It combines free-text and multiple-choice questions with themes, audio feedback, progress tracking and PDF export.', technologies: ['Python', 'PySimpleGUI'], status: 'Privates Projekt', repositoryUrl: 'https://github.com/safrii350/quizify' },
 ]
 
 export const homelabEn: HomelabEntry[] = [

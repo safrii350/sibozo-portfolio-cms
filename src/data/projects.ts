@@ -37,11 +37,12 @@ export const projects: Project[] = [
     url: 'https://wizbase.pages.dev/',
   },
   {
-    id: 'linux-setup',
-    title: 'Linux Setup',
+    id: 'quizify',
+    title: 'Quizify',
     description:
-      'Ein Bash-Skript für die automatisierte Einrichtung einer neuen Linux-Arbeitsumgebung. Es installiert und konfiguriert unter anderem Fastfetch, Oh My Posh, GRC, Pipes, htop und btop sowie meine persönlichen Dotfiles.',
-    technologies: ['Bash', 'Shell', 'Git', 'Dotfiles', 'Oh My Posh', 'Fastfetch'],
+      'Eine moderne Quiz-App zur Vorbereitung auf die IHK-Abschlussprüfung für Fachinformatiker Anwendungsentwicklung. Sie kombiniert freie Eingaben und Multiple-Choice-Fragen mit Themes, Audio-Feedback, Fortschrittsanzeige und PDF-Export.',
+    technologies: ['Python', 'PySimpleGUI'],
     status: 'Privates Projekt',
+    repositoryUrl: 'https://github.com/safrii350/quizify',
   },
 ]

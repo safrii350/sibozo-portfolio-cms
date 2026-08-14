@@ -10,6 +10,7 @@ import {
   faLaravel,
   faLinux,
   faPhp,
+  faPython,
   faReact,
   faWindows,
 } from '@fortawesome/free-brands-svg-icons'
@@ -35,6 +36,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const technologyIcons: Record<string, IconDefinition> = {
   PHP: faPhp,
+  Python: faPython,
+  PySimpleGUI: faDesktop,
   Laravel: faLaravel,
   Livewire: faTowerBroadcast,
   SQL: faDatabase,

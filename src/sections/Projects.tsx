@@ -34,6 +34,19 @@ export function Projects() {
                   <span className="status__play" aria-hidden="true">▶</span>
                   {copy.live}
                 </a>
+              ) : project.repositoryUrl ? (
+                <a
+                  className="status status--live"
+                  href={project.repositoryUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={language === 'de'
+                    ? `${project.title} Repository öffnen (öffnet in neuem Tab)`
+                    : `Open the ${project.title} repository (opens in a new tab)`}
+                >
+                  <span className="status__play" aria-hidden="true">▶</span>
+                  {copy.repository}
+                </a>
               ) : (
                 <span className="status">{statusLabel(project.status)}</span>
               )}
@@ -53,13 +66,6 @@ export function Projects() {
                 ))}
               </ul>
             </div>
-            {project.repositoryUrl && (
-              <div className="project-card__links">
-                <a href={project.repositoryUrl} target="_blank" rel="noreferrer">
-                  {copy.repository} ↗
-                </a>
-              </div>
-            )}
           </article>
         ))}
       </div>
