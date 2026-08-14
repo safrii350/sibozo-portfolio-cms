@@ -15,12 +15,12 @@ export function TerminalSequence() {
   const { language } = useLanguage()
   const terminalLines: TerminalLine[] = useMemo(() => language === 'de' ? [
     { command: 'whoami', output: 'Michael Sibozo' },
-    { command: 'focus --current', output: 'Linux · Webentwicklung · IT-Support' },
-    { command: 'status', output: 'Offen für den Berufseinstieg', status: true },
+    { command: 'focus --current', output: 'Linux · Frontend · Backend' },
+    { command: 'status', output: 'Bereit für den Berufseinstieg', status: true },
   ] : [
     { command: 'whoami', output: 'Michael Sibozo' },
-    { command: 'focus --current', output: 'Linux · Web Development · IT Support' },
-    { command: 'status', output: 'Open to entry-level opportunities', status: true },
+    { command: 'focus --current', output: 'Linux · Frontend · Backend' },
+    { command: 'status', output: 'Ready to start my career', status: true },
   ], [language])
   const [lineIndex, setLineIndex] = useState(0)
   const [characterIndex, setCharacterIndex] = useState(0)
@@ -65,7 +65,7 @@ export function TerminalSequence() {
   }, [characterIndex, lineIndex, reduceMotion, terminalLines, visibleOutputs])
 
   return (
-    <div className="terminal__sequence" aria-label={language === 'de' ? 'Michael Sibozo, Fokus: Linux, Webentwicklung und IT-Support. Offen für den Berufseinstieg.' : 'Michael Sibozo, focused on Linux, web development and IT support. Open to entry-level opportunities.'}>
+    <div className="terminal__sequence" aria-label={language === 'de' ? 'Michael Sibozo, Fokus: Linux, Frontend und Backend. Bereit für den Berufseinstieg.' : 'Michael Sibozo, focused on Linux, frontend and backend. Ready to start my career.'}>
       {terminalLines.map((line, index) => {
         const isActive = index === lineIndex && !reduceMotion
         const isVisible = index < lineIndex || isActive || reduceMotion
@@ -87,6 +87,12 @@ export function TerminalSequence() {
           </div>
         )
       })}
+      <p
+        className={`terminal__prompt${lineIndex >= terminalLines.length || reduceMotion ? ' is-visible' : ''}`}
+        aria-hidden="true"
+      >
+        <span>$</span> <span className="terminal__cursor" />
+      </p>
     </div>
   )
 }

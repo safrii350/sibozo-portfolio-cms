@@ -3,7 +3,7 @@ import type { CareerEntry, HomelabEntry, Project, SkillGroup } from '../types/co
 export const ui = {
   de: {
     nav: ['Über mich', 'Skills', 'Projekte', 'Homelab', 'Kontakt'],
-    hello: 'Hallo, ich bin Michael Sibozo.', heroTitle: 'Webentwicklung,', heroAccent: 'Linux und Selfhosting.',
+    hello: 'Michael Sibozo · IT & Web', heroTitle: 'Webentwicklung,', heroAccent: 'Linux und Selfhosting.',
     intro: 'Angehender Fachinformatiker für Anwendungsentwicklung mit Fokus auf Webentwicklung, Linux und Selfhosting.',
     projectsButton: 'Projekte ansehen', contactButton: 'Kontakt aufnehmen',
     aboutLabel: '01 / Über mich', aboutTitle: 'Ein paar Worte über mich.',
@@ -15,7 +15,7 @@ export const ui = {
   },
   en: {
     nav: ['About', 'Skills', 'Projects', 'Homelab', 'Contact'],
-    hello: "Hi, I'm Michael Sibozo.", heroTitle: 'Web development,', heroAccent: 'Linux and self-hosting.',
+    hello: 'Michael Sibozo · IT & Web', heroTitle: 'Web development,', heroAccent: 'Linux and self-hosting.',
     intro: 'Aspiring IT specialist in application development focused on web development, Linux and self-hosting.',
     projectsButton: 'View projects', contactButton: 'Get in touch',
     aboutLabel: '01 / About', aboutTitle: 'A little about me.',
