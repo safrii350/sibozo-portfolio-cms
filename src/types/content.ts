@@ -6,6 +6,7 @@ export type Project = {
   status: 'Abschlussprojekt' | 'In Entwicklung' | 'Privates Projekt' | 'Live'
   featured?: boolean
   url?: string
+  linkType?: 'live' | 'documentation'
   repositoryUrl?: string
 }
 

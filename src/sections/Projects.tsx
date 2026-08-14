@@ -23,16 +23,22 @@ export function Projects() {
           >
             <div className="project-card__meta">
               <span>0{index + 1}</span>
-              {project.status === 'Live' && project.url ? (
+              {project.url ? (
                 <a
                   className="status status--live"
                   href={project.url}
                   target="_blank"
                   rel="noreferrer"
-                  aria-label={`${project.title} live ansehen (öffnet in neuem Tab)`}
+                  aria-label={project.linkType === 'documentation'
+                    ? language === 'de'
+                      ? `${project.title} Dokumentation öffnen (öffnet in neuem Tab)`
+                      : `Open the ${project.title} documentation (opens in a new tab)`
+                    : language === 'de'
+                      ? `${project.title} live ansehen (öffnet in neuem Tab)`
+                      : `View ${project.title} live (opens in a new tab)`}
                 >
                   <span className="status__play" aria-hidden="true">▶</span>
-                  {copy.live}
+                  {project.linkType === 'documentation' ? copy.documentation : copy.live}
                 </a>
               ) : project.repositoryUrl ? (
                 <a

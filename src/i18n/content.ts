@@ -11,7 +11,7 @@ export const ui = {
     projectsLabel: '03 / Projekte', projectsTitle: 'Meine Projekte.', projectsIntro: 'Ausgewählte Projekte aus Umschulung, Praxis und privaten Lernprojekten.',
     homelabLabel: '04 / Linux & Homelab', homelabTitle: 'Linux & Homelab.', homelabIntro: 'In meinem Homelab und auf eigenen VPS probiere ich Linux-Systeme, Dienste und Infrastrukturthemen praktisch aus. Nicht jedes Setup funktioniert auf Anhieb – gerade bei der Fehlersuche und Optimierung lerne ich viel über die Zusammenhänge.',
     contactLabel: '05 / Kontakt', contactTitle: 'Kontakt.', contactText: 'Aktuell suche ich den Berufseinstieg in der IT, idealerweise an der Schnittstelle von Linux, Webentwicklung, Support und Systemadministration. Bei Fragen oder Interesse freue ich mich über eine Nachricht.',
-    live: 'Live', repository: 'Repository', legal: 'Rechtliches', top: 'Nach oben ↑', navigation: 'Navigation',
+    live: 'Live', documentation: 'Dokumentation', repository: 'Repository', legal: 'Rechtliches', top: 'Nach oben ↑', navigation: 'Navigation',
   },
   en: {
     nav: ['About', 'Skills', 'Projects', 'Homelab', 'Contact'],
@@ -23,7 +23,7 @@ export const ui = {
     projectsLabel: '03 / Projects', projectsTitle: 'My projects.', projectsIntro: 'Selected work from my training, practical experience and personal learning projects.',
     homelabLabel: '04 / Linux & Homelab', homelabTitle: 'Linux & Homelab.', homelabIntro: 'In my homelab and on my own VPS instances, I explore Linux systems, services and infrastructure hands-on. Troubleshooting and optimization help me understand how the different parts work together.',
     contactLabel: '05 / Contact', contactTitle: 'Contact.', contactText: 'I am currently looking for an entry-level IT role at the intersection of Linux, web development, support and system administration. Feel free to get in touch if you have any questions or opportunities.',
-    live: 'Live', repository: 'Repository', legal: 'Legal notice & privacy', top: 'Back to top ↑', navigation: 'Navigation',
+    live: 'Live', documentation: 'Documentation', repository: 'Repository', legal: 'Legal notice & privacy', top: 'Back to top ↑', navigation: 'Navigation',
   },
 } as const
 
@@ -46,7 +46,7 @@ export const skillGroupsEn: SkillGroup[] = [
 ]
 
 export const projectsEn: Project[] = [
-  { id: 'traineebook', title: 'Traineebook', description: 'A web application where trainees can write and submit weekly training reports. Trainers can review, approve or reject them.', technologies: ['PHP', 'Laravel', 'Blade', 'JavaScript', 'MySQL'], status: 'Abschlussprojekt', featured: true },
+  { id: 'traineebook', title: 'Traineebook', description: 'A web application where trainees can write and submit weekly training reports. Trainers can review, approve or reject them.', technologies: ['PHP', 'Laravel', 'Blade', 'JavaScript', 'MySQL'], status: 'Abschlussprojekt', featured: true, url: 'https://traineebook.pages.dev/', linkType: 'documentation' },
   { id: 'portfolio-cms', title: 'sibozo.de', description: 'My personal portfolio built as a React one-pager. I plan to manage its content through a small Supabase admin panel.', technologies: ['React', 'TypeScript', 'Vanilla CSS', 'Vite'], status: 'In Entwicklung' },
   { id: 'vista-aero-frutiger', title: 'Vista World', description: 'A small desktop world in the browser inspired by Windows Vista and Frutiger Aero, with interactive windows, a start menu and desktop icons.', technologies: ['HTML', 'CSS', 'JavaScript'], status: 'Live', url: 'https://windowsvista.pages.dev/' },
   { id: 'wizbase', title: 'Wizbase', description: 'A web app for keeping notes, guides and useful knowledge organized and easy to find again.', technologies: ['HTML', 'CSS', 'React'], status: 'Live', url: 'https://wizbase.pages.dev/' },

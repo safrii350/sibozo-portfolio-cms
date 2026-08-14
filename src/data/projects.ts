@@ -9,6 +9,8 @@ export const projects: Project[] = [
     technologies: ['PHP', 'Laravel', 'Blade', 'JavaScript', 'MySQL'],
     status: 'Abschlussprojekt',
     featured: true,
+    url: 'https://traineebook.pages.dev/',
+    linkType: 'documentation',
   },
   {
     id: 'portfolio-cms',
